@@ -1,0 +1,7 @@
+baseline,attack,n,ASR,blocked_clauses,mean_verify_ns
+v_tauth_b,Att_1_UnauthorizedExpansion,5,0.000,,0
+v_tauth_b,Att_2_ForgedApproval,5,0.000,pi_1,6296020
+v_tauth_b,Att_3_Replay,5,0.000,pi_8,28307840
+v_tauth_b,Att_4_ParamSub,5,0.000,pi_5,10077940
+v_tauth_b,Att_5_ApIdSwap,5,0.000,pi_9,2960
+v_tauth_b,Att_6_ThresholdDowngrade,5,0.000,pi_9,980

@@ -1,0 +1,9 @@
+scenario,tool,severity,breadth,irreversibility,impact,context,score,tier,selected_config,expected_tier,matches_expectation
+read_email tight,read_email,0.1,0.015384615384615385,0.05,0.2,0.2,0.09557692307692307,low,low_risk,low,True
+send_email tight,send_email,0.6,0.015384615384615385,0.4,0.45,0.35,0.3855769230769231,medium,med_risk,medium,True
+send_email wide (breadth up),send_email,0.6,0.6,0.4,0.45,0.35,0.5025000000000001,medium,med_risk,medium,True
+send_email bare (breadth max),send_email,0.6,1.0,0.4,0.45,0.35,0.5825,medium,med_risk,medium,True
+send_email wide + sensitive ctx,send_email,0.6,0.015384615384615385,0.4,0.45,0.6499999999999999,0.4155769230769231,medium,med_risk,medium,True
+send_email money range,send_email,0.6,0.1232876712328767,0.4,0.45,0.35,0.40715753424657536,medium,med_risk,medium,True
+delete_file tight,delete_file,0.95,0.015384615384615385,1.0,0.35,0.45,0.6355769230769232,medium,med_risk,medium,True
+delete_file bare (irreversible + broad),delete_file,0.95,1.0,1.0,0.35,0.45,0.8325,high,high_risk,high,True

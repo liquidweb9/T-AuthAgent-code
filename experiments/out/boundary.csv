@@ -1,0 +1,32 @@
+scenario,case,expected,accepted,rejected_clause,verdict,note
+B1_overbroad,Phi={} signer-signed wildcard request,accept (cryptographically valid),True,,informational,crypto authorization succeeds; safety must be enforced upstream
+B2_canonical,dict key reordering,identical bytes,False,,match,canonical CBOR sorts keys
+B2_canonical,nested object reordering,identical bytes,False,,match,
+B2_canonical,Unicode NFC vs NFD in signed field,distinct digests (no silent conflation),False,,match,different bytes -> different hash -> any cross-use fails pi_1
+B2_canonical,duplicate map key encoding,deterministic outcome,False,,match,canonical encoder never emits duplicates; decoder is deterministic
+B2_canonical,integer 1 vs float 1.0 in Phi,distinct canonical bytes,False,,match,"encoder preserves the type tag, so the two cannot be swapped"
+B2_canonical,path traversal under lexical prefix pattern,accept (lexical match) -- normalization gap,True,,informational,gateway must normalize/canonicalize paths before predicate evaluation; the signature alone cannot express containment
+B2_canonical,path traversal with traversal-aware pattern,pi_6,False,pi_6,match,"shows the gap is closable in the predicate/AST, not the crypto"
+B3_context,session switched after issuance,pi_2,False,pi_2,match,
+B3_context,validly signed cert with unknown transition id,pi_3,False,pi_3,match,signature is authentic; the *transition* does not exist
+B3_context,transition id mutated post-sign,pi_1,False,pi_1,match,
+B3_context,expired transition record,pi_3,False,pi_3,match,
+B3_context,partial catalog rotation,pi_1/pi_10,False,pi_10,match,
+B4_cm,share splicing across two requests,pi_1,False,pi_1,match,
+B4_cm,share dropped (below threshold),pi_1,False,pi_1,match,
+B4_cm,request metadata substituted post-sign,pi_1,False,pi_1,match,
+B4_cm,old aggregate replayed on fresh request,pi_1,False,pi_1,match,
+B4_cm,"false threshold claim (t declared, <t shares)",pi_1,False,pi_1,match,declared t is not trusted; the sharing polynomial enforces it
+B4_cm,valid shares reordered (must still verify),accept,True,,match,Lagrange interpolation is order-independent; reordering is benign
+B5_complex,nested_object: legitimate call,accept,True,,match,{'msg': {'to': 'bob@example.com'}}
+B5_complex,nested_object: one-field substitution,pi_6,False,pi_6,match,{'msg': {'to': 'eve@evil.example'}}
+B5_complex,list_membership: legitimate call,accept,True,,match,"{'recipients': ['bob@example.com', 'carol@example.com']}"
+B5_complex,list_membership: one-field substitution,pi_6,False,pi_6,match,"{'recipients': ['bob@example.com', 'eve@evil.org']}"
+B5_complex,resource_wildcard: legitimate call,accept,True,,match,{'path': '/sandbox/report.txt'}
+B5_complex,resource_wildcard: one-field substitution,pi_6,False,pi_6,match,{'path': '/etc/passwd'}
+B5_complex,monetary_range: legitimate call,accept,True,,match,{'amount': 100}
+B5_complex,monetary_range: one-field substitution,pi_6,False,pi_6,match,{'amount': 10000}
+B5_complex,multi_parameter: legitimate call,accept,True,,match,"{'to': 'bob@example.com', 'amount': 50, 'date': '2025-10-14'"
+B5_complex,multi_parameter: one-field substitution,pi_6,False,pi_6,match,"{'to': 'bob@example.com', 'amount': 50, 'date': '2026-10-14'"
+B6_expiry,at exp boundary (now == exp),accept,True,,match,
+B6_expiry,one second past exp,pi_7,False,pi_7,match,clock source is the gateway's; a skewed signer cannot extend life

@@ -1,0 +1,36 @@
+trial_id,baseline,baseline_label,attack,attack_label,tool,is_benign,effect_observed,attack_success,benign_success,accepted,rejection_reason,threshold_t,committee_n,risk_level,verify_ns,verify_us,cert_size_bytes,cert_valid,nonce_consumed,request_hash,timestamp
+0,v_tauth_b,v   T-AuthAgent ModeB,Att_1_UnauthorizedExpansion,Unauthorized expansion,send_email,0,0,0,1,1,,3,5,low,0,0.0,0,0,0,,2026-10-18T18:17:25
+1,v_tauth_b,v   T-AuthAgent ModeB,Att_1_UnauthorizedExpansion,Unauthorized expansion,send_email,0,0,0,1,1,,3,5,low,0,0.0,0,0,0,,2026-10-18T18:17:25
+2,v_tauth_b,v   T-AuthAgent ModeB,Att_1_UnauthorizedExpansion,Unauthorized expansion,send_email,0,0,0,1,1,,3,5,low,0,0.0,0,0,0,,2026-10-18T18:17:25
+3,v_tauth_b,v   T-AuthAgent ModeB,Att_1_UnauthorizedExpansion,Unauthorized expansion,send_email,0,0,0,1,1,,3,5,low,0,0.0,0,0,0,,2026-10-18T18:17:25
+4,v_tauth_b,v   T-AuthAgent ModeB,Att_1_UnauthorizedExpansion,Unauthorized expansion,send_email,0,0,0,1,1,,3,5,low,0,0.0,0,0,0,,2026-10-18T18:17:25
+5,v_tauth_b,v   T-AuthAgent ModeB,Att_2_ForgedApproval,Forged approval,send_email,0,0,0,1,0,pi_1,3,5,low,6501800,6501.8,0,0,0,,2026-10-18T18:17:25
+6,v_tauth_b,v   T-AuthAgent ModeB,Att_2_ForgedApproval,Forged approval,send_email,0,0,0,1,0,pi_1,3,5,low,6395400,6395.4,0,0,0,,2026-10-18T18:17:25
+7,v_tauth_b,v   T-AuthAgent ModeB,Att_2_ForgedApproval,Forged approval,send_email,0,0,0,1,0,pi_1,3,5,low,5908100,5908.1,0,0,0,,2026-10-18T18:17:26
+8,v_tauth_b,v   T-AuthAgent ModeB,Att_2_ForgedApproval,Forged approval,send_email,0,0,0,1,0,pi_1,3,5,low,6128100,6128.1,0,0,0,,2026-10-18T18:17:26
+9,v_tauth_b,v   T-AuthAgent ModeB,Att_2_ForgedApproval,Forged approval,send_email,0,0,0,1,0,pi_1,3,5,low,6546700,6546.7,0,0,0,,2026-10-18T18:17:26
+10,v_tauth_b,v   T-AuthAgent ModeB,Att_3_Replay,Replay,send_email,0,0,0,1,0,pi_8,3,5,low,41154300,41154.3,0,0,0,,2026-10-18T18:17:30
+11,v_tauth_b,v   T-AuthAgent ModeB,Att_3_Replay,Replay,send_email,0,0,0,1,0,pi_8,3,5,low,35857400,35857.4,0,0,0,,2026-10-18T18:17:33
+12,v_tauth_b,v   T-AuthAgent ModeB,Att_3_Replay,Replay,send_email,0,0,0,1,0,pi_8,3,5,low,32073500,32073.5,0,0,0,,2026-10-18T18:17:38
+13,v_tauth_b,v   T-AuthAgent ModeB,Att_3_Replay,Replay,send_email,0,0,0,1,0,pi_8,3,5,low,25998600,25998.6,0,0,0,,2026-10-18T18:17:41
+14,v_tauth_b,v   T-AuthAgent ModeB,Att_3_Replay,Replay,send_email,0,0,0,1,0,pi_8,3,5,low,6455400,6455.4,0,0,0,,2026-10-18T18:17:44
+15,v_tauth_b,v   T-AuthAgent ModeB,Att_4_ParamSub,Parameter substitution,send_email,0,0,0,1,0,pi_5,3,5,low,9750100,9750.1,0,0,0,,2026-10-18T18:17:47
+16,v_tauth_b,v   T-AuthAgent ModeB,Att_4_ParamSub,Parameter substitution,send_email,0,0,0,1,0,pi_5,3,5,low,13037300,13037.3,0,0,0,,2026-10-18T18:17:50
+17,v_tauth_b,v   T-AuthAgent ModeB,Att_4_ParamSub,Parameter substitution,send_email,0,0,0,1,0,pi_5,3,5,low,12680500,12680.5,0,0,0,,2026-10-18T18:17:53
+18,v_tauth_b,v   T-AuthAgent ModeB,Att_4_ParamSub,Parameter substitution,send_email,0,0,0,1,0,pi_5,3,5,low,6633600,6633.6,0,0,0,,2026-10-18T18:17:56
+19,v_tauth_b,v   T-AuthAgent ModeB,Att_4_ParamSub,Parameter substitution,send_email,0,0,0,1,0,pi_5,3,5,low,8288200,8288.2,0,0,0,,2026-10-18T18:17:59
+20,v_tauth_b,v   T-AuthAgent ModeB,Att_5_ApIdSwap,Configuration swap,send_email,0,0,0,1,0,pi_9,3,5,low,3300,3.3,0,0,0,,2026-10-18T18:18:05
+21,v_tauth_b,v   T-AuthAgent ModeB,Att_5_ApIdSwap,Configuration swap,send_email,0,0,0,1,0,pi_9,3,5,low,2000,2.0,0,0,0,,2026-10-18T18:18:08
+22,v_tauth_b,v   T-AuthAgent ModeB,Att_5_ApIdSwap,Configuration swap,send_email,0,0,0,1,0,pi_9,3,5,low,5200,5.2,0,0,0,,2026-10-18T18:18:12
+23,v_tauth_b,v   T-AuthAgent ModeB,Att_5_ApIdSwap,Configuration swap,send_email,0,0,0,1,0,pi_9,3,5,low,1400,1.4,0,0,0,,2026-10-18T18:18:16
+24,v_tauth_b,v   T-AuthAgent ModeB,Att_5_ApIdSwap,Configuration swap,send_email,0,0,0,1,0,pi_9,3,5,low,2900,2.9,0,0,0,,2026-10-18T18:18:19
+25,v_tauth_b,v   T-AuthAgent ModeB,Att_6_ThresholdDowngrade,Threshold downgrade,delete_file,0,0,0,1,0,pi_9,3,5,low,800,0.8,0,0,0,,2026-10-18T18:18:19
+26,v_tauth_b,v   T-AuthAgent ModeB,Att_6_ThresholdDowngrade,Threshold downgrade,delete_file,0,0,0,1,0,pi_9,3,5,low,1000,1.0,0,0,0,,2026-10-18T18:18:19
+27,v_tauth_b,v   T-AuthAgent ModeB,Att_6_ThresholdDowngrade,Threshold downgrade,delete_file,0,0,0,1,0,pi_9,3,5,low,900,0.9,0,0,0,,2026-10-18T18:18:19
+28,v_tauth_b,v   T-AuthAgent ModeB,Att_6_ThresholdDowngrade,Threshold downgrade,delete_file,0,0,0,1,0,pi_9,3,5,low,1100,1.1,0,0,0,,2026-10-18T18:18:19
+29,v_tauth_b,v   T-AuthAgent ModeB,Att_6_ThresholdDowngrade,Threshold downgrade,delete_file,0,0,0,1,0,pi_9,3,5,low,1100,1.1,0,0,0,,2026-10-18T18:18:19
+30,v_tauth_b,v   T-AuthAgent ModeB,Benign,Benign workflow,send_email,1,1,0,1,1,,3,5,low,6720500,6720.5,568,1,1,,2026-10-18T18:18:22
+31,v_tauth_b,v   T-AuthAgent ModeB,Benign,Benign workflow,send_email,1,1,0,1,1,,3,5,low,6340300,6340.3,568,1,1,,2026-10-18T18:18:25
+32,v_tauth_b,v   T-AuthAgent ModeB,Benign,Benign workflow,send_email,1,1,0,1,1,,3,5,low,6340500,6340.5,568,1,1,,2026-10-18T18:18:27
+33,v_tauth_b,v   T-AuthAgent ModeB,Benign,Benign workflow,send_email,1,1,0,1,1,,3,5,low,6608700,6608.7,568,1,1,,2026-10-18T18:18:30
+34,v_tauth_b,v   T-AuthAgent ModeB,Benign,Benign workflow,send_email,1,1,0,1,1,,3,5,low,6341400,6341.4,568,1,1,,2026-10-18T18:18:33

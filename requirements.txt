@@ -1,0 +1,5 @@
+-e ./progent
+cbor2==6.1.2
+cryptography==49.0.0
+jsonschema==4.26.0
+pytest

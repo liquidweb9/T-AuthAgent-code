@@ -1,0 +1,7 @@
+scenario,idempotency_key,first_authorized,retry_same_cert_rejected,retry_new_cert_authorized,effects,duplicate_effects,note
+clean,False,True,True,False,1,0,"single authorization, single execution, no retry"
+failed_before_effect,True,True,True,True,1,0,
+lost_ack_no_key,False,True,True,True,2,1,no key -> the retry applies a SECOND effect
+lost_ack_with_key,True,True,True,True,1,0,the retry is deduplicated by the idempotency key
+duplicate_submission_no_key,False,True,False,True,2,1,no key -> two effects for one intent
+duplicate_submission_with_key,True,True,False,True,1,0,backend deduplicates the second submission
